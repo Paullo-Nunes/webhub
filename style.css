@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "clash";
+    src: url(fonts/ClashDisplay-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "clash";
+    src: url(fonts/ClashDisplay-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "clash";
+    src: url(fonts/ClashDisplay-Regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 4vw;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+h1, h2 {
+    font-family: "clash";
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+}

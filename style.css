@@ -81,7 +81,18 @@ h1, h2 {
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 16px;    
+            z-index: 2;
+            
         }
     }
+}
+
+.subtitulo::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.208);
+    position: absolute;
+    z-index: 1;
 }

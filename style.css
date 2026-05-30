@@ -68,6 +68,10 @@ h1, h2 {
         width: 350px;
         height: 56px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
         
         video {
             position: absolute;

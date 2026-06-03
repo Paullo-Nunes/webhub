@@ -28,6 +28,12 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -48,12 +54,9 @@ h2 {
 }
 
 .hero {
-    width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -95,20 +98,12 @@ h2 {
             font-size: 16px;
             z-index: 2;
             font-weight: 400;
-            mix-blend-mode: color-dodge; /*Faz efeito de desvio sobre o texto*/
+            mix-blend-mode: color-dodge;
+            /*Faz efeito de desvio sobre o texto*/
             color: rgb(216, 216, 216);
         }
     }
 }
-
-/* .subtitulo::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.208);
-    position: absolute;
-    z-index: 1;
-} */
 
 .conteudo {
     display: flex;
@@ -155,4 +150,24 @@ a {
     background-color: #000;
     color: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.151);
+}
+
+.secao2 {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+
+    h2 {
+        font-size: 5vw;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+.secao3 {
+    justify-content: center;
+    align-items: center;
+
 }

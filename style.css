@@ -29,18 +29,19 @@ body {
     overflow-x: hidden;
 }
 
-section {
+section,
+footer,
+header {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
 header {
-    display: flex;
     justify-content: space-between;
     padding: 32px 4vw;
     position: absolute;
-    width: 100%;
+    flex-direction: row;
     z-index: 3;
 
     h1 {
@@ -54,19 +55,19 @@ h2 {
     font-family: "clash", sans-serif;
 }
 
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
 .hero {
     height: 100vh;
     overflow: hidden;
     position: relative;
     justify-content: center;
     align-items: center;
-
-    .bg {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-    }
 
     .subtitulo {
         position: relative;
@@ -129,9 +130,8 @@ h2 {
     }
 }
 
-a {
+.botoes a {
     text-decoration: none;
-    color: #fff;
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 8px 8px 8px 20px;
@@ -140,17 +140,19 @@ a {
     align-items: center;
     gap: 16px;
     color: rgba(0, 0, 0, 0.9);
+
+    &.botao-secundario {
+        background-color: #000;
+        color: rgba(255, 255, 255, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.151);
+    }
 }
+
+
 
 .botoes {
     display: flex;
     gap: 32px;
-}
-
-.botao-secundario {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.151);
 }
 
 .secao2 {
@@ -177,7 +179,7 @@ a {
     }
 
     p {
-        margin-bottom: 60px ;
+        margin-bottom: 60px;
     }
 
     .projetos {
@@ -200,7 +202,55 @@ a {
         opacity: 0;
     }
 
-    h2:nth-child(1){
+    h2:nth-child(1) {
         opacity: 1;
+    }
+}
+
+footer {
+    position: relative;
+    height: 100vh;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: end;
+    padding: 4vw;
+    overflow: hidden;
+
+    .esquerda {
+        h2 {
+            font-size: 10vw;
+            font-weight: 400;
+        }
+
+        div {
+            display: flex;
+            gap: 32px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffffb0;
+        }
+
+        p {
+            color: #ffffffb0;
+        }
+    }
+
+
+    .direita {
+        width: 46%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        h2 {
+            font-size: 3vw;
+            text-align: end;
+        }
+
+        p {
+            margin: 32px 0px 40px;
+        }
     }
 }

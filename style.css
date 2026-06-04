@@ -40,8 +40,9 @@ header {
 header {
     justify-content: space-between;
     padding: 32px 4vw;
-    position: absolute;
+    position: fixed;
     flex-direction: row;
+    mix-blend-mode: difference;
     z-index: 3;
 
     h1 {
@@ -247,6 +248,7 @@ footer {
         h2 {
             font-size: 3vw;
             text-align: end;
+            font-weight: 500;
         }
 
         p {

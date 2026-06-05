@@ -61,6 +61,12 @@ h2 {
     z-index: -1;
     top: 0;
     left: 0;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .hero {

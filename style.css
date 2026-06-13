@@ -74,6 +74,7 @@ h2 {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: #000;
 }
 
 .hero {
@@ -187,17 +188,17 @@ h2 {
 }
 
 .secao2 {
-    height: 100vh;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 4vw;
-    position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
     pointer-events: none;
     z-index: 20;
-
+    
     h2 {
         font-size: 5vw;
         font-weight: 400;
@@ -211,6 +212,8 @@ h2 {
 .secao3 {
     justify-content: center;
     align-items: center;
+    background-color: #000;
+    position: relative;
 
     h2 {
         font-size: 4vw;

@@ -15,19 +15,34 @@ window.addEventListener('load', () => {
 
 
     //Quando rolar a página cada retângulo desse
-    gsap.to(".retangulos div", {
-        y: "0%",
-        stagger: 0.08,
+
+    //Criando uma linha do tempo para que cada animação seja sequencial
+    const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao",
             markers: true,
             scrub: 3,
             start: "0% 0%",
-            end: "+=100%",
+            end: "100%",
             pin: true,
-            scrub: 3,
             
         }
     });
+    linhaDoTempo.to(".retangulos div", {
+        y: "0%",
+        stagger: 0.08,
+        
+    })
+    linhaDoTempo.to(".secao2", {
+        opacity: 1
+    })
+     //o from vai fazer com que a animação seja debaixo para cima, e o Y se refere a linha vertical
+    linhaDoTempo.from(".secao2 h2", {
+        y: 200
+    })
+    //o splitText faz com que o texto seja dividido. O segundo parâmetro mostra de qual maneira será feita essa divisão
+    const split = new SplitText(".secao2 h2", {
+        types: "chars"
+    })
 
 });

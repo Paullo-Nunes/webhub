@@ -20,29 +20,35 @@ window.addEventListener('load', () => {
     const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao",
-            markers: true,
+            markers: false,          //*retira as marcações do scroll trigger
             scrub: 3,
             start: "0% 0%",
-            end: "100%",
+            end: "+=3000",
             pin: true,
             
         }
     });
     linhaDoTempo.to(".retangulos div", {
         y: "0%",
-        stagger: 0.08,
+        stagger: 0.3,
+        duration: 4
         
     })
     linhaDoTempo.to(".secao2", {
-        opacity: 1
+        opacity: 1,
+        duration: 0.1
     })
      //o from vai fazer com que a animação seja debaixo para cima, e o Y se refere a linha vertical
-    linhaDoTempo.from(".secao2 h2", {
-        y: 200
-    })
+    
     //o splitText faz com que o texto seja dividido. O segundo parâmetro mostra de qual maneira será feita essa divisão
     const split = new SplitText(".secao2 h2", {
-        types: "chars"
+        types: "chars",
+        mask: "lines"
+    })
+    linhaDoTempo.from(split.chars, {
+        y: 100,
+        stagger: 0.1,
+        duration: 1
     })
 
 });
